@@ -1,0 +1,23 @@
+services:
+  demo:
+  wms: # has to be turned on to make the GetLegendGraphic requests work
+  wmts:
+    restful: true
+    kvp: true
+
+layers:
+  - name: wmts_layer_legendurl
+    title: WMTS Layer with a static LegendURL
+    legendurl: "file://legend.png" # this enables the normal GetLegendGraphic for WMS
+    wmts_rest_legendurl: '{base_url}/wmts/legend/{layer_name}.png' # this changes the legendurl for wmts rest capabilities
+    sources: [tile_cache]
+  - name: wmts_layer_no_legendurl
+    title: WMTS Layer without a static LegendURL
+    sources: [ tile_cache ]
+
+caches:
+  tile_cache:
+    cache:
+      type: file
+    grids: [GLOBAL_WEBMERCATOR]
+    sources: []
