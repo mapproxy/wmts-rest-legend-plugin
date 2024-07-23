@@ -1,0 +1,1 @@
+# wmts-rest-legend-plugin
