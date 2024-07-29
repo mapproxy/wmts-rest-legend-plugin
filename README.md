@@ -7,7 +7,7 @@ under the `/wmts` endpoint.
 Quick-Start
 -----------
 
-1. `pip install git+ssh://github.com/mapproxy/wmts-rest-legend-plugin#egg=wmts-rest-legend-plugin`
+1. `pip install git+https://github.com/mapproxy/wmts-rest-legend-plugin#egg=wmts-rest-legend-plugin`
 2. add the following config to layers:
 ```yaml
 layers:
